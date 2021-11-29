@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sähköinen julkaiseminen | Kuvat ja videot</title>
+  </head>
+  <body>
+    <h1>Kuvat ja videot verkkosivulla</h1>
+
+    <h2>1. Kuvien tuominen verkkosivulle</h2>
+
+    <p>
+      Kuvat tuodaan verkkosivulle img-tagilla. Sillä ei ole päättävää tagiparia.
+      Img-tagi on merkkitason elementti. Tämä mahdollistaa kuvien lisäämisen
+      vaikkapa tekstikappaleen sisään. Jos kuva (img-tagi) sijoitetaan
+      tekstikappaleen sisälle, teksti kiertää kuvan automaattisesti.
+    </p>
+
+    <h3>1.1. Img-tagin pakolliset attribuutit</h3>
+
+    <p>
+      Img-tagin pakollist attribuutit ovat src ja alt. Attribuuteista src
+      määrittelee polun kuvan sijaintiin ja alt määrittelee vaihtoehtoisen
+      tekstin kuvan paikalle, jos kuvaa ei voida jostain syystä näyttää
+      selaimessa.
+    </p>
+    <p>
+      Src ja alt attribuutit koodissa:
+      <code
+        >&lt;img src=&quot;kuva.jpg&quot; alt=&quot;vaihtoehtoinen
+        teksti&quot;&gt;</code
+      >
+    </p>
+
+    <h3>1.2. Kuvien asemointi rinnakkain</h3>
+
+    <p>
+      Koska img-tagi on merkkitason elementti, voidaan kuvia lisätä sivulle
+      rinnakkain yksinkertaisesti kirjoittamalla img-tageja peräkkäin. Tällöin
+      kuvia ladotaan rinnakkain, kunnes niitä ympäröivä tila täyttyy. Tämän
+      jälkeen seuraavat kuvat rivittyvät automaattisesti edellisten alle.
+    </p>
+
+    <p>
+      <code
+        >&lt;img src=&quot;kuvat/1.jpg&quot; alt=&quot;kuva1&quot;&gt;&lt;img
+        src=&quot;kuvat/2.jpg&quot; alt=&quot;kuva2&quot;&gt;</code
+      >
+    </p>
+
+    <img src="kuvat/1.jpg" alt="naurava mies" />
+    <img src="kuvat/2.jpg" alt="turhautunut mies" />
+
+    <p>
+      Jos rinnakkain aseteltavien kuvien ladontatapaa halutaan kontrolloida
+      tarkemmin, määrittely toteutetaan CSS:n float-ominaisuudella.
+    </p>
+
+    <h3>1.3. Kuvien asemointi allekkain</h3>
+
+    <p>
+      Jos kuvan halutaan käyttäytyvän lohkoelementin lailla, voidaan img-tagi
+      paketoida p-tagiparin sisään. Tällöin kuva muodostaa sivulle oman
+      lohkonsa, jonka ylä- ja alapuolella on hieman tyhjää tilaa.
+    </p>
+
+    <p>
+      <code
+        >&lt;p&gt;&lt;img src=&quot;kuvat/3.jpg&quot;
+        alt=&quot;kuva3&quot;&gt;&lt;/p&gt;</code
+      >
+    </p>
+    <p>
+      <code
+        >&lt;p&gt;&lt;img src=&quot;kuvat/4.jpg&quot;
+        alt=&quot;kuva4&quot;&gt;&lt;/p&gt;</code
+      >
+    </p>
+
+    <p><img src="kuvat/3.jpg" alt="peilikuva" /></p>
+    <p><img src="kuvat/4.jpg" alt="halaavat figuurit" /></p>
+
+    <h2>2. Kuvan esityskoon määrittäminen</h2>
+
+    <p>
+      Kuvan esityskoko määritellään width ja height attribuuttien avulla. Width
+      määrittää leveyden ja height korkeuden.
+    </p>
+
+    <p>
+      Alla olevien kuvien todellinen koko on 1920 x 1279 pikseliä. Esityskooksi
+      on määritetty 400 x 266 pikseliä.
+    </p>
+
+    <p>
+      <code
+        >&lt;img src=&quot;kuvat/5.jpg&quot; alt=&quot;kuva5&quot;
+        width=&quot;400&quot; height=&quot;266&quot;&gt; &lt;img
+        src=&quot;kuvat/6.jpg&quot; alt=&quot;kuva6&quot; width=&quot;400&quot;
+        height=&quot;266&quot;&gt;</code
+      >
+    </p>
+
+    <img src="kuvat/5.jpg" alt="ajava moottoripyörä" width="400" height="266" />
+    <img
+      src="kuvat/6.jpg"
+      alt="pysähtynyt moottoripyörä"
+      width="400"
+      height="266"
+    />
+
+    <h2>3. Videoiden upottaminen verkkosivulle</h2>
+
+    <p>
+      Videoita voidaan upottaa verkkosivulle iframe-tagin avulla. Iframe-tagin
+      tärkeimmät atttribuutit ovat src, title, width sekä height. Src
+      määrittelee polun videoon ja title kertoo mikä videon sisältö on. Width ja
+      height attribuutit määrittelevät videon esityskoon.
+    </p>
+    <p>
+      Koodissa iframe-tagi voi näyttää seuraavalta:
+      <code
+        >&lt;iframe src=&quot;video.htm&quot; height=&quot;200&quot;
+        width=&quot;300&quot;
+        title=&quot;Esimerkki&quot;&gt;&lt;/iframe&gt;</code
+      >
+    </p>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/hQAHSlTtcmY"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>

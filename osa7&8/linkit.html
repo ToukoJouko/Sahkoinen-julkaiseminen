@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sähköinen julkaiseminen | Linkit</title>
+</head>
+<body>
+    <h1 id="pää">Linkit</h1>
+
+    <ol>
+        <li><a href="#luku1">Mihin linkeillä viitataan?</a></li>
+        <li><a href="#luku2">Absoluuttiset linkit</a></li>
+        <li><a href="#luku3">Suhteelliset linkit</a></li>
+        <li><a href="#luku4">Linkkitekstin valinta</a></li>
+        <li><a href="#luku5">Kuva linkkinä</a></li>
+        <li><a href="#luku6">Linkin tekeminen muihin kuin HTML-tiedostoihin</a></li>
+        <li><a href="#luku7">Linkki sähköpostiosoitteeseen</a></li>
+        <li><a href="#luku8">Linkin tekeminen sivun tiettyyn kohtaan</a></li>
+        <li><a href="#luku9">Kohdesivun avaaminen uuteen selainikkunaan</a></li>
+    </ol>
+
+
+
+    <h2 id="luku1">1. Mihin linkeillä viitataan?</h2>
+
+    <p>Linkeillä voidaan viitata HTML-tiedostojen lisäksi myös mihin tahansa muihin tiedostoihin (kuva, ääni, pdf, jne.). Linkin kohde voi sijaita:</p>
+
+    <ul>
+        <li>toisella sivustolla (websivu tai muu tiedosto)</li>  
+        <li>omalla sivustolla (websivu tai muu tiedosto)</li>
+        <li>avoinna olevan sivun eri kohdassa (esim. väliotsikko)</li>
+        <li>toisen sivun tietyssä kohdassa (esim. väliotsikko)</li>
+    </ul>
+
+    <p>Linkkejä on kahta päätyyppiä: absoluuttisia ja suhteellisia. Absoluuttisessa linkissä kohde ilmoitetaan verkko-osoitteena (URL, eli Uniform Resource Locator). Absoluuttisia linkkejä käytetään, kun halutaan viitata oman sivuston ulkopuoliseen kohteeseen.</p>
+
+    <p>Suhteellinen linkki taas ilmoittaa kohteen sijainnin suhteessa nykyiseen sijaintiin. Suhteellisia linkkejä käytetään, kun viitataan omalla sivustolla sijaitsevaan kohteeseen.</p>
+
+
+
+    <h2 id="luku2">2. Absoluuttiset linkit</h2>
+
+    <p>Absoluuttisilla linkeillä viitataan oman sivuston ulkopuolella sijaitseviin kohteisiin. Linkki tehdään a-tagiparilla ja aloittavaan tagiin lisättävällä href-attribuutilla. Href-attribuutin arvoksi annetaan kohdedokumentin URL-osoite.</p>
+
+    <p>A-tagiparin väliin kirjoitetaan websivulla linkkinä näkyvä teksti, eli kuuma sana. Kuuma sana voi olla kohdetta kuvaava teksti, sen kohdeosoite (URL) tai kuva.</p>
+
+    <ul>
+        <li>a-tagipari, href-attribuutti, kohdeosoite ja linkkiteksti: <code>&lt;a href=”https://www.yle.fi”&gt;YLE&lt;/a&gt;</code></li>
+    </ul>
+
+
+
+    <h2 id="luku3">3. Suhteelliset linkit</h2>
+
+    <p>Suhteellisia linkkejä käytetään, kun viitataan omalla sivustolla sijaitseviin sivuihin tai tiedostoihin. Niitä käytetään oman sivuston sisällä, jotta sivuston sisäinen linkitys saadaan toteutettua toimivaksi jo ennen sivuston siirtämistä webpalvelimelle.
+    </p>
+
+    <p>Suhteellisen ja absoluuttisen linkin ainut ero on a-tagin href-attribuutin arvossa. Kun absoluuttisessa linkissä href-attribuutin arvoksi annetaan kohdesivun URL, suhteellisessa linkissä href-attribuutin arvoksi annetaan kohteen sijainti oman sivuston hakemistorakenteessa.</p>
+
+    <ul>
+        <li>suhteellinen linkki ilmaisee kohdedokumentin sijainnin suhteessa nykyiseen sijaintiin</li>
+        <li>suhteellisilla linkeillä voidaan viitata ainoastaan oman sivuston kohteisiin</li>
+        <li>href-attribuutin arvoksi annetaan kohdedokumentin sijainti ja tiedostonimi</li>
+    </ul>
+
+    <p>Kuinka suhteellisilla linkeillä liikutaan hakemistorakenteessa?</p>
+
+    <ul>
+        <li>jos linkin kohdedokumentti on samassa hakemistossa, annetaan href-attribuutin arvoksi pelkästään kohdetiedoston nimi, esimerkiksi tuotteet.html</li>
+        <li>alihakemistossa sijaitsevaan dokumenttiin viitataan antamalla href-attribuutin alkuun alikansion nimi, kauttaviiva ja kohdetiedoston nimi</li>
+        <li>hakemistorakenteessa ylempänä olevaan dokumenttiin viitataan antamalla href-attribuutin arvon alkuun kaksi pistettä, kauttaviiva ja kohdetiedoston nimi</li>
+    </ul>
+
+    <p>Esimerkkejä suhteellisten linkkien toiminnasta:</p>
+
+    <ul>
+        <li><code>&lt;a href="tiedosto.html"&gt;kohdetiedosto samassa kansiossa&lt;/a&gt; </code></li>
+        <li><code>&lt;a href="kansion_nimi/tiedosto.html"&gt;kohdetiedosto alikansiossa&lt;/a&gt; </code></li>
+        <li><code>&lt;a href="../tiedosto.html"&gt;kohdetiedosto ylemmässä kansiossa&lt;/a&gt; </code></li>
+        <li><code>&lt;a href="../kansion_nimi/tiedosto.html"&gt;kohdetiedosto samalla hakemistotasolla mutta toisessa kansiossa&lt;/a&gt; </code></li>
+    </ul>
+
+
+
+    <h2 id="luku4">4. Linkkitekstin valinta</h2>
+
+    <p>Sivulla linkkinä näkyvä teksti kirjoitetaan a-tagiparin väliin. Linkkitekstin tulee kuvata linkin kohdetta mahdollisimman selkeästi ja yksiselitteisesti. Siitä pitää pystyä helposti ja ennustettavasti arvioimaan, mitä selaimessa avautuu, kun linkkiä napsautetaan. Hyvä lähtökohta on verrata linkkitekstiä ja kohdesivun pääotsikkoa.</p>
+
+    <p>Kunnollinen linkkiteksti koostuu usein substantiivista sekä mahdollisesti muutamasta sitä selittävästä apusanasta. Linkkitekstin on hyvä olla lyhyehkö, muutaman sanan mittainen, jotta se on nopeasti ymmärrettävissä.</p>
+
+    <p>Yleisiä mutta huonoja vaihtoehtoja linkkitekstiksi ovat sanat, jotka eivät kerro linkin kohteesta yhtään mitään. Tässä neljä esimerkkiä huonoista linkkiteksteistä:</p>
+
+    <ol>
+        <li><a href="#">Katso</a> lisätietoa minulle suositellusta Oral-B sähköhammasharjasta.</li>
+        <li>XYZ-tapahtuman ilmoittautumisohjeen löydät <a href="#">täältä</a>.</li>
+        <li>Katso ohjeita tuotteiden aktivoinnista <a href="#">verkkosivultamme</a>.</li>
+        <li>Sony Xperia XA -käyttöohje: <a href="#">6459ujfkgjawf9j4.pdf</a></li>
+    </ol>
+
+    <p>Jos kunnollisen linkkitekstin valinta tuntuu hankalalta, sanajärjestystä tai lauserakennetta on muutettava, jotta linkkiteksteistä voidaan tehdä kunnolliset.</p>
+
+    <p>Toimivampia vaihtoehtoja edellisille linkkiteksteille:</p>
+
+    <ol>
+        <li>Hammaslääkärini suositteli minulle Oral-B <a href="https://www.youtube.com/">sähköhammasharjaa.</a></li>
+        <li>XYZ-tapahtuman <a href="https://www.youtube.com/">ilmoittautumisohje.</a></li>
+        <li><a href="https://www.youtube.com/">Ohje</a> tuoteaktivointiin.</li>
+        <li>Sony Xperia XA <a href="https://www.youtube.com/">-käyttöohje</a> (pdf, 2,4 mt)</li>
+    </ol>
+
+    <p><a href="#pää">Sivun alkuun</a></p>
+
+    <h2 id="luku5">5. Kuva linkkinä</h2>
+
+    <p>Kuvat toimivat usein linkkeinä. Esimerkiksi sivuston tunnuskuva on lähes poikkeuksetta linkki sivuston etusivulle. Toinen yleinen käyttötapa kuvalinkeille ovat kuvagallerioiden ja tuotekuvien pikkukuvat, jotka toimivat linkkejä suurempiin kuvatiedostoihin.</p>
+
+    <p>Jotkin selaimet lisäävät kuvalinkkien ympärille siniset reunukset. Kuvalinkin reunukset saa poistettua CSS-säännöllä.</p>
+
+    <p>Kuvasta tehdään linkki korvaamalla linkkiteksti sivulle upotetulla kuvatiedostolla:</p>
+
+    <ul>
+        <li><code>&lt;a href=””&gt;&lt;img src=”kuvatiedosto.jpg”&gt;&lt;/a&gt;</code></li>
+    </ul>
+
+
+
+    <h2 id="luku6">6. Linkin tekeminen muihin kuin HTML-tiedostoihin</h2>
+
+    <p>Kun haluat laittaa sivullesi jonkin tiedoston imuroitavaksi, viitataan tiedostoon aivan normaalisti suhteellisella linkillä. Jos tiedosto on jotain sellaista muotoa, jota selain ei itse osaa avata, selain kysyy linkkiä napsautettaessa mitä kohdetiedostolle tehdään.</p>
+
+    <p>Imuroitaviin tiedostoihin johtavien linkkien yhteydessä on hyvä mainita tiedostotyyppi ja tiedoston koko. Näin käyttäjälle tarjotaan etukäteen tieto linkin toiminnasta.</p>
+
+    <ul>
+        <li><a href="pdf/Huawei_Honor_10_Käyttöohje.pdf">puhelimen käyttöohje</a> (pdf, 15,3 mt)</li>
+    </ul>
+
+
+
+    <h2 id="luku7">7. Linkki sähköpostiosoitteeseen</h2>
+
+    <p>Sähköpostiosoitteeseen viittaava linkki käynnistää koneen oletussähköpostiohjelman ja asettaa vastaanottajaksi linkissä määritellyn osoitteen.</p>
+
+    <p>Sähköpostilinkki tehdään antamalla href-attribuutin arvoksi <code>mailto:sähköpostiosoite</code>. Linkkiteksti määritetään normaaliin tapaan. Se voi olla sähköpostiosoite tai jokin muu sopiva teksti.</p>
+
+    <ul>
+        <li><a href="mailto:toukop97@gmail.com">toukop97@gmail.com</a></li>
+        <li>Viestiä minulle voi laittaa <a href="mailto:toukop97@gmail.com">sähköpostin</a> kautta</li>
+    </ul>
+
+    <h2 id="luku8">8. Linkin tekeminen sivun tiettyyn kohtaan</h2>
+
+    <p>Pitkät sivut voidaan useimmiten pilkkoa pienemmiksi aisakokonaisuuksiksi jakamalla sisältö usealle sivulle mutta aina se ei ole mielekästä.</p>
+
+    <p>Sivun yläosaan sijoitettava interaktiivinen sisällysluettelo on eräs tapa nopeuttaa pitkän sivun sisällön hahmottamista ja parantaa sivun käyttönopeutta. Interaktiivisen sisällysluettelon lisäksi skrollausta saadaan vähennettyä lisäämällä pitkille sivuille sivun alkuun vieviä linkkejä.</p>
+
+    <p>Sivun tiettyyn kohtaan johtavat linkit muodostuvat kahdesta osasta, itse linkistä ja linkin kohteesta.</p>
+
+    <p>Linkin kohdepaikan merkitseminen tapahtuu id-attribuutilla:</p>
+
+    <ul>
+        <li>etsi dokumentista tagi, johon haluat linkin vievän</li>
+        <li>lisää tagiin id-attribuutti, esim. näin: <code>&lt;h2 id=&quot;&quot;&gt;Väliotsikko&lt;/h2&gt;</code></li>
+    </ul>
+
+    <p>Id-attribuutin arvon muotoilusäännöt:</p>
+
+    <ul>
+        <li>id-attribuutin arvon tulee aina alkaa kirjaimella</li>
+        <li>yksi id-attribuutin arvo voi esiintyä kyseisellä sivulla vain kerran</li>
+        <li>id-attribuutin arvossa ei saa olla skandeja, erikoismerkkejä tai välilyöntejä</li>
+        <li>id:t kannattaa pitää suhteellisen lyhyinä</li>
+    </ul>
+
+    <p>Linkin tekeminen samalla sivulla olevaan id-attribuutilla merkittyyn kohteeseen:</p>
+
+    <ul>
+        <li>kirjoita normaali linkkikomento: <code>&lt;a href=&quot;&quot;&gt;linkkiteksti&lt;/a&gt;</code></li>
+        <li>lisää kohdeosoitteen alkuun risuaitamerkki: <code>&lt;a href=&quot;#&quot;&gt;linkkiteksti&lt;/a&gt;</code></li>
+        <li>laita osoitteeksi kohteelle antamasi yksilöllinen id-tunnus: <code>&lt;a href=&quot;#kohteen_id&quot;&gt;linkkiteksti&lt;/a&gt;</code></li>
+        <li>ero normaaliin linkkiin on siis risuaitamerkki (#) ja se, että osoite on kohteen yksilöllinen tunnus (id), ei URL tai tiedoston nimi</li>
+    </ul>
+
+    <p>Entä jos kohde on eri dokumentissa kuin siihen viittaava linkki?</p>
+
+    <ul>
+        <li>jos kohde sijaitse eri dokumentissa kuin siihen viittaava linkki, täytyy linkkiin lisätä tieto (polku) siitä, missä dokumentissa kohde (id) on</li>
+        <li>kohde omalla sivustolla, eri dokumentissa, samassa kansiossa: <code>&lt;a href=&quot;tiedostonimi.html#kohteen_id&quot;&gt;&lt;/a&gt;</code></li>
+        <li>kohde omalla sivustolla, alikansiossa sijaitsevassa dokumentissa: <code>&lt;a href=&quot;kansion_nimi/tiedostonimi.html#kohteen_id&quot;&gt;&lt;/a&gt;</code></li>
+        <li>jos kohde on eri sivustolla, käytetään absoluuttista linkkiä ja kohteen yksilöivää tunnusta: <code>&lt;a href=&quot;#make-link-text-meaningful&quot; id=&quot;markdown-toc-make-link-text-meaningful&quot;&gt;Make link text meaningful&lt;/a&gt;</code></li>
+    </ul>
+
+    <p>Muille kuin omalle sivustolle viitattaessa tekniikka toimii vain, jos sivun tekijä on merkinnyt sivustoonsa kohteita id-attribuutilla. Rajoituksena on tietysti se, että et voi itse mennä lisäämään toisen tekemään sivuun uusia kohteita (id-attribuutteja). Jos halutaan viitata toisen sivuston tiettyyn kohtaan, on kohdesivun HTML-koodista etsittävä mahdolliset id-attribuutit.</p>
+
+
+
+    <h2 id="luku9">9. Kohdesivun avaaminen uuteen selainikkunaan</h2>
+
+    <p>Jos haluat linkin kohteen avautuvan uuteen selainikkunaan, lisää aloittavaan a-tagiin target-attribuutti ja anna sille arvoksi _blank.</p>
+
+    <ul>
+        <li>koodissa: <code>&lt;a href=&quot;https://www.youtube.com/&quot; target=&quot;_blank&quot;&gt;youtube&lt;/a&gt;</code></li>
+        <li>selaimessa: <a href="https://www.youtube.com/" target="_blank">youtube</a></li>
+    </ul>
+
+    <p>Käyttäjän pakottaminen tiettyihin toimintatapoihin on aina syytä harkita tarkasti. Jos käyttäjä haluaa avata linkin kohteen uudessa ikkunassa, onnistuu se klikkaamalla linkkiä hiiren oikealla nappulalla ja valitsemalla haluttu avaustapa tai klikkaamalla linkkiä Ctrl-nappi pohjassa. Kuinka itse suhtaudut sivustoihin, joissa linkit aukeavat uusiin ikkunoihin? Harkitse tarkoin, miksi ja milloin rajoitat käyttäjän vapautta valita avataanko linkin kohde samassa vai uudessa ikkunassa.</p>
+
+    <p><a href="#pää">Sivun alkuun</a></p>
+
+</body>
+</html>

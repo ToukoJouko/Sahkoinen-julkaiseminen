@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sähköinen julkaiseminen | Taulukot</title>
+</head>
+<body>
+    <h1>Taulukot</h1>
+
+
+
+    <h2>1.	Taulukoiden tehtävät</h2>
+
+    <p>Taulukoilla on kaksi tehtävää: 1) taulukkomuotoisen tiedon esittäminen ja 2) eri elementtien asetteleminen sivulle (navigointijärjestelmä, kuvat, teksti, jne.).</p>
+    <p>Taulukoiden sisältönä voi olla kaikkea samaa mitä muuallakin HTML-sivulla, eli tekstiä, lukuja, kuvia ja linkkejä.</p>
+    <p>Yksinkertaisen taulukon tekeminen on helppoa, mutta monimutkaiset taulukkorakenteet voivat olla hankalia hallita. Taulukoita tehtäessä kannattaakin pyrkiä mahdollisimman yksinkertaiseen rakenteeseen.</p>
+
+
+
+    <h3>1.1. Mihin taulukoita on järkevää käyttää?</h3>
+
+            <ul>
+                <li>lukujen tai tekstin taulukkomuotoinen esittäminen</li>
+                <li>tekstin asemointi, esim. palstoitus (tai CSS)</li>
+                <li>kuvien ja logojen asemointi (tai CSS)</li>
+            </ul>
+
+
+
+    <h3>1.2. Entä sivuston ulkoasun taittaminen taulukoilla?</h3>
+
+    <p>Sivun asettelu taulukoiden avulla, eli taulukkotaitto (esimerkiksi sivun jakaminen kahteen tai kolmeen soluun), on yleistä, havainnollista ja helppoa. Nykyisin asettelussa suositaan taulukoiden sijaan yhä enemmän CSS:n käyttöä, koska se on joustavampaa, ja varsinkin laajojen sivustojen hallinta on CSS:n avulla huomattavasti helpompaa ja tehokkaampaa.</p>
+    <p>Taulukoilla taitetun sivuston asettelun muuttaminen on hyvin työlästä, koska pahimmillaan jokaisen sivun taulukkorakennetta joudutaan muuttamaan käsin. Asettelu taulukoilla koetaan kuitenkin usein helpommaksi ja havainnollisemmaksi kuin asettelu CSS:llä.</p>
+    <p>Taulukoiden käyttäminen ulkoasun tarkkaan muotoiluun ei juuri koskaan ole välttämätöntä.</p>
+
+
+
+
+    <h2>2.	Taulukoiden rakenne ja toiminta</h2>
+
+    <p>Taulukot asemoituvat oletuksena aina käytettävän tilan vasempaan ylälaitaan. Ellei taulukon koolle anneta CSS:llä erillisiä määrityksiä, mukautuu taulukon koko sen soluihin sijoitetun sisällön vaatiman tilan mukaisesti. Solut siis venyvät leveys- ja korkeussuunnassa sen mukaan, mitä niihin sijoitetaan.</p>
+    <p>HTML-taulukolla, ja sen kaikilla soluilla, on aina reunukset. Oletuksena reunukset ovat kuitenkin näkymättömät. Taulukoiden tekemisen ajaksi reunukset kannattaa määrittää näkyviksi. Reunukset saadaan näkyville lisäämällä aloittavaan table-tagiin border-attribuutti ja antamalla sille arvoksi 1. Border-attribuutti on vanhentunut, eikä kuulu enää HTML5-standardiin. Se on kuitenkin kätevä keino saada reunukset näkyviksi taulukoiden tekemisen ajaksi.</p>
+    <p>Taulukoiden ulkoasun lopullinen määrittely, kuten koko, täytteet, reunukset ja taustavärit toteutetaan CSS-säännöillä.</p>
+
+
+
+    <h3>2.1. Taulukkotagit</h3>
+
+    <p>Table-tagipari rajaa koko taulukon. Pelkkä table-tagipari ei kuitenkaan vielä tee mitään sivulla näkyvää. Se yksinkertaisesti ilmoittaa missä taulukko alkaa ja missä se päättyy.</p>
+    <p>Tr-tagipari (table row) tekee taulukkoon rivin. Tr-tagiparit kirjoitetaan aina table-tagiparin sisään. Myöskään tr-tagipari ei tee vielä mitään selaimessa näkyvää. Se vain ilmoittaa missä rivi alkaa ja päättyy.</p>
+    <p>Td-tagipari (table data) tekee taulukon riviin solun. Td-tagit kirjoitetaan aina rivien (tr-tagipari) sisään. Kaikki taulukossa näkyvä sisältö sijoitetaan aina soluihin, eli td-tagiparien sisään.</p>
+    <p>Alla on kuvattu yksinkertaisimman mahdollisen HTML-taulukon koodi, eli yksirivinen taulukko, jossa on 1 solu.</p> 
+
+    &lt;table&gt;<br>
+    &nbsp;&nbsp;&lt;tr&gt; <br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&lt;td&gt; <br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&lt;/td&gt; <br>
+    &nbsp;&nbsp;&lt;/tr&gt; <br>
+    &lt;/table&gt;
+
+
+    <table border="1">
+        <tr>
+            <td>Tagi</td>
+            <td>Kuvaus</td>
+        </tr>
+        <tr>
+            <td>table</td>
+            <td>rajaa koko taulukon</td>
+        </tr>
+        <tr>
+            <td>tr</td>
+            <td>tekee taulukkoon rivin</td>
+        </tr>
+        <tr>
+            <td>td</td>
+            <td>tekee riviin solun</td>
+        </tr>
+    </table>
+
+
+    <h3>2.2. Taulukkotagien attribuutit</h3>
+
+    <p>Aiemmissa HTML-versioissa taulukkotageilla oli paljon erilaisia attribuutteja, joilla määritettiin taulukoiden ulkoasua, kuten niiden kokoa, reunuksia, värejä ja täytteitä. Nykyisessä HTML5-standardissa taulukoiden ja solujen koot, reunukset, täytteet ja värit määritetään CSS:n avulla. HTML5-dokumenttityypissä on jäljellä vain muutamia attribuutteja taulukkotageille. Tärkeimmät niistä koskevat solujen yhdistämistä (colspan, rowspan).</p>
+    <p>Attribuuttien arvot kirjoitetaan aina lainausmerkkien sisään. Kullakin attribuutilla on joukko ennalta määriteltyjä arvoja.</p>
+
+    <table border="1">
+        <tr>
+            <td>Attribuutti</td>
+            <td>Kuvaus</td>
+            <td>Arvot</td>
+            <td>Sijainti</td>
+        </tr>
+        <tr>
+            <td>colspan</td>
+            <td>solujen yhdistäminen vaakasuunnassa</td>
+            <td>numero</td>
+            <td>td</td>
+        </tr>
+        <tr>
+            <td>rowspan</td>
+            <td>solujen yhdistäminen vaaksuunnassa</td>
+            <td>numero</td>
+            <td>td</td>
+        </tr>
+    </table>
+
+    <h2>3.	Solujen yhdistäminen</h2>
+
+    <p>HTML-taulukot ovat rakenteeltaan aina symmetrisiä. Tämä tarkoittaa sitä, että taulukon jokaisessa rivissä tulee olla aina yhtä paljon soluja (sarakkeita) ja jokaisessa sarakkeessa yhtä paljon rivejä.</p>
+    <p>Symmetrisestä rakenteesta poikkeaminen tapahtuu yhdistämällä soluja toisiinsa. Kun solu yhdistetään sen vieressä olevaan soluun tai soluihin, yksi solu edustaa useampaa solua pysty- tai vaakasuunnassa.</p>
+
+            <ul>
+                <li>vaakasuuntaisten solujen yhdistäminen tapahtuu colspan-attribuutilla</li>
+                <li>pystysuunnassa soluja voidaan yhdistää rowspan-attribuutilla</li>
+                <li>attribuutti sijoitetaan siihen soluun, jonka halutaan edustavan vierekkäisiä soluja</li>
+                <li>attribuutin arvo (luku) määrittää, kuinka montaa solua kyseinen solu edustaa</li>
+                <li>yhdistämisen suunta on aina vasemmalta oikealle (colspan) ja ylhäältä alas (rowspan)</li>
+                <li>taulukon koodista tulee poistaa niiden solujen koodi, jotka yhdistettäessä peittyvät</li>
+            </ul>
+
+    <p>Colspan </p>
+    <table border="1">
+        <tr>
+            <td>colspan</td>
+            <td>solujen yhdistäminen vaakasuunnassa</td>
+        </tr>
+        <tr>
+            <td colspan="2">tässä solussa colspan="2" ja oikealla olevan solun kood on poistettu</td>
+        </tr>
+    </table>
+
+    <p>Rowspan</p>
+    <table border="1">
+        <tr>
+            <td>rowspan</td>
+            <td>solujen yhdistäminen vaakasuunnassa</td>
+        </tr>
+        <tr>
+            <td rowspan="2">tässä solussa rowspan="2" ja alla olevan solun koodi poistettu</td>
+            <td>testisisältöä</td>
+        </tr>
+        <tr>
+            <td>testisisältöä</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

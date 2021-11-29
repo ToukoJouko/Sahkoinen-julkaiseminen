@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sähköinen julkaiseminen | Testin merkkaus</title>
+  </head>
+  <body>
+    <h1>Tekstin merkkaus</h1>
+
+    <h2>1. Leipäteksti ja otsikot</h2>
+
+    <p>
+      Teksti kirjoitetaan HTML-editoriin aina ilman muotoiluja. Tämän jälkeen
+      teksti merkitään HTML-tageilla. Selain latoo tekstin käytettävissä olevan
+      tilan mukaan. Asettelua - kuten tavutusta, rivien pituuden tai kappaleiden
+      välisen tyhjän tilan määrittämistä - ei tule tehdä. Tekstin esitysasu
+      (fontti, koko, väri, lihavointi, kursivointi) määritetään vasta sivuston
+      ulkoasua ja asettelua tehtäessä.
+    </p>
+
+    <h3>1.1 Otsikkotasot</h3>
+
+    <ul>
+      <li>h1 sivun pääotsikko</li>
+      <li>h2 toiseksi suurin otsikko</li>
+      <li>h3 kolmanneksi suurin otsikko</li>
+      <li>h4 neljänneksi suurin otsikko</li>
+      <li>h5 viidenneksi suurin otsikko</li>
+      <li>h6 kuudenneksi suurin otsikko</li>
+    </ul>
+
+    <p>
+      Otsikkotageilla merkitty teksti erottuu oma lohkokseen, jonka ylä- ja
+      alapuolella on tyhjää tilaa. Otsikointikäytäntö tulee ehdottomasti pitää
+      yhtenevänä koko sivustolla! Näin sivuston ulkoasun hallinta
+      CSS-tiedostolla on helppoa.
+    </p>
+
+    <p>
+      Sivun pääotsikko tulee merkitä aina h1 tasoiseksi, ja väliotsikot
+      pienemmän tason otsikoiksi. Vältä kovin monen otsikkotason käyttämistä.
+      Pääotsikkotason lisäksi 1 tai 2 alaotsikkotasoa on lähes aina riittävä
+      määrä.
+    </p>
+
+    <h3>1.2 Kappalejako - p</h3>
+
+    <ul>
+      <li>Leipätekstin tekstikappaleet rajataan aina p-tagiparin sisään</li>
+      <li>Kirjoita yksi asia yhteen kappaleeseen</li>
+      <li>
+        P-tagipari muodostaa oman lohkonsa, jonka ylä- ja ala puolella on tyhjää
+        tilaa
+      </li>
+      <li>Älä käytä tyhjiä p-tageja tyhjän tilan luomiseen</li>
+    </ul>
+
+    <h3>1.3 Pakotettu rivinvaihto - br</h3>
+
+    <ul>
+      <li>Br-tagi tekee pakotetun rivinvaihdon</li>
+      <li>Leipätekstissä br-tagia tarvitaan hyvin harvoin</li>
+      <li>Ei päättävää tagia</li>
+      <li>
+        Älä käytä peräkkäisiä br-tageja p-tagin korvaamiseksi tai tyhjän tilan
+        luomiseen
+      </li>
+    </ul>
+
+    <h3>1.4 Avainsanojen korostaminen - strong ja em</h3>
+
+    <p>
+      Tekstiä voidaan korostaa usealla eri tavalla (väliotsikot, linkit, listat,
+      kappalejako, jne.) Avainsanojen ja nimien korostamiseen riittää kaksi
+      tagia:
+    </p>
+
+    <ul>
+      <li>
+        Strong tekee vahvan korostuksen. Käytännössä selaimet lihavoivat
+        tekstin.
+      </li>
+      <li>
+        Em korostaa sillä rajatun tekstin. Käytännössä selaimet kursivoivat
+        tekstin.
+      </li>
+    </ul>
+
+    <h2>
+      2. Merkkitason elementtien (inline) ja lohkotason elementtien (block) ero
+    </h2>
+
+    <p>
+      HTML-tagit voidaan jakaa kahteen ryhmään, lohkoelementteihin ja
+      merkkitason elementteihin. Lohkoelementit muodostavat sivulle oman
+      erillisen kokonaisuuden, esimerkiksi otsikon, tekstikappaleen, taulukon
+      tai listan. Merkkitason elementit taas eivät muodosta itsenäisiä lohkoja.
+      Merkkitason elementeillä rajataan osia lohkoelementin sisällöstä,
+      esimerkiksi tekstikappaleessa sijaitseva nimi, yksittäinen lause tai
+      linkkinä toimivat sanat.
+    </p>
+
+    <p>
+      Tekstin korostuselementit (strong ja em) ovat merkkitason elementtejä.
+      Siksi niitä voidaan käyttää tekstikappaleen sisällä yksittäisten sanojen
+      tai tekstipätkien korostamiseen ilman että tekstin ladontatapa muuttuu.
+    </p>
+
+    <p>MUISTA:</p>
+
+    <p>
+      Merkkitason elementeillä (esim. strong tai em) rajattu teksti ei saa
+      sisältää lohkotason elementtejä (esim. h2, p, div jne.). Lohkotason
+      elementillä (esim. p) rajattu teksti voi sisältää merkkitason elementtejä
+      (esim. strong, em, span, jne.)
+    </p>
+
+    <h2>3. Listat</h2>
+
+    <p>
+      Listat nopeuttavat sivun sisällön hahmottamista ja tukevat silmäilyyn
+      perustuvaa lukutapaa. Liika listojen käyttö tekee sivusta kuitenkin
+      helposti luotaantyöntävän oloisen. Eniten käytetyt listatyypit ovat
+      numeroitu lista ja luetelmalista.
+    </p>
+
+    <h3>3.1 Numeroitu lista - Ordered List</h3>
+
+    <ol>
+      <li>Koko lista rajataan ol-tagiparin (Ordered List) sisään</li>
+      <li>Jokainen listan rivi rajataan li-tagiparin (List Item) sisään</li>
+      <li>Selain numeroi listan rivit automaattisesti</li>
+      <li>Ol-listaksi määritelty alue saa sisältää ainoastaan li-tagipareja</li>
+      <li>
+        Listamerkin tyyppi voidaan vaihtaa aloittavan ol-tagin attribuutilla
+        type
+      </li>
+      <li>
+        Arvoina 1 - numerot, a - aakkoset, A - isot aakkoset, i - roomalaiset, I
+        - kapiteelit roomalaiset
+      </li>
+      <li>
+        Aloitusnumeroa voidaan vaihtaa aloittavan ol-tagin attribuutilla start
+        (arvoksi aloitusnumero)
+      </li>
+    </ol>
+
+    <h3>3.2 Luetelmalista - Unordered List</h3>
+
+    <ul>
+      <li>Koko lista rajataan ul-tagiparin (Unordered List) sisään</li>
+      <li>Listan rivit rajataan li-tagiparin (List Item) sisään</li>
+      <li>Selain lisää jokaisen listan rivin eteen listamerkin</li>
+      <li>Ul-listaksi määritelty alue saa sisältää ainoastaan li-tagipareja</li>
+    </ul>
+
+    <h3>3.3 Listan sisentäminen</h3>
+
+    <p>
+      Sisennetty lista tehdään seuraavasti. Tee ul- tai ol-lista normaaliin
+      tapaan. Luo viimeisen sisentämättömän rivin sanan ja rivin sulkevan
+      li-tagin väliin kokonaan uusi lista.
+    </p>
+    <p>
+      Muista että viimeisen sisentämättömän rivin sulkeva li-tagi tulee
+      sisennetyn listan ulkopuolelle!
+    </p>
+
+    <p>
+      Numeroidut listat voivat sisältää sisennettyjä luetelmalistoja - ja
+      päinvastoin.
+    </p>
+
+    <p>Esimerkki luetelmalistasta, joka sisältää sisennetyn luetelmalistan:</p>
+
+    <ul>
+      <li>oikea kylvöaika</li>
+      <li>kasvuympäristö</li>
+      <ul>
+        <li>lämpötila</li>
+        <li>valon määrä</li>
+        <li>sademäärä</li>
+      </ul>
+      <li>siementen laatu</li>
+    </ul>
+  </body>
+</html>

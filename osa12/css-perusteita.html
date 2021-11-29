@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sähköinen julkaiseminen | CSS</title>
+
+    <link rel="stylesheet" href="harjoitustyyli.css"></link>
+  </head>
+  <body>
+    <h1>CSS - Cascading Style Sheets</h1>
+
+    <h2>Mitä CSS:llä tehdään?</h2>
+
+    <p>
+      Tyylisäännöstöillä (Cascading Style Sheets) määritellään html-dokumenttien
+      esitysasua. Tyylisäännöstö sisältää erilaisia html-tageille (h1, ul, li,
+      p, body, jne.) laadittuja määrityksiä. Määritykset koskevat tyypillisesti
+      tekstin ulkoasua, sivustolla käytettäviä värejä ja elementtien asettelua
+      sivulle.
+    </p>
+
+    <p>
+      Sivuston kaikki tyylimäärittelyt kirjoitetaan lähes aina erilliseen
+      CSS-tiedostoon, jolloin koko sivuston ulkoasua voidaan hallita yhtä
+      tiedostoa editoimalla. Tyylitiedosto tallennetaan
+      <code>tiedostonimi.css</code> muotoon. Tyylimäärityksiä voidaan kuitenkin
+      kirjoittaa myös suoraan html-tiedostoihin. Tämä on järkevää oikeastaan
+      vain silloin, kun jollekin sivulle halutaan tehdä sivuston yleisestä
+      tyylistä poikkeavia määrityksiä.
+    </p>
+
+    <h2>Tyylitiedoston linkittäminen HTML-dokumenttiin</h2>
+
+    <p>
+      Tyylitiedosto linkitetään HTML-dokumenttiin lisäämällä head-osioon
+      (head-tagiparin väliin) link-tagi. Link-tagin href-attribuutin arvo
+      ilmoittaa CSS-tiedoston sijainnin ja tiedostonimen, rel-attribuutti taas
+      kertoo tiedoston suhteen html-dokumenttiin.
+    </p>
+
+    <p><code>&lt;link rel="stylesheet" href="tyylitiedosto.css"&gt; </code></p>
+
+    <p>
+      Yhteen HTML-dokumenttiin voidaan tarvittaessa liittää useita
+      tyylitiedostoja. Useiden tyylitiedostojen käyttö voi olla järkevää, jos
+      määrittelyjä tulee hyvin paljon ja niitä halutaan ryhmitellä eri
+      tiedostoihin. Useita tyylitiedostoja on mielekästä käyttää myös
+      sellaisilla sivustoilla, joissa sivuston eri osiot ovat erilaisia
+      ulkoasultaan.
+    </p>
+
+    <h2>Kuinka pääsen alkuun?</h2>
+
+    <p>
+      Tyylisäännöstöjä kirjoitettaessa on ehdottoman järkevää käyttää
+      kunnollista CSS-tiedostojen kirjoittamiseen tarkoitettua ohjelmaa. Ne
+      helpottavat kirjoittamista huomattavasti ja vähentävät virheellisten
+      määritysten riskiä. Lisäksi ne sisältävät käteviä aputoimintoja kuten
+      koodin automaattitäydennyksen ja värien valintatyökaluja.
+    </p>
+
+    <p>
+      Kun kirjoitat tyylisääntöjä, ajattele aina mitä tarkkaan ottaen olet
+      tekemässä, ja pohdi mihin kaikkeen luomasi määritys vaikuttaa. CSS:n
+      kirjoittaminen vaatii tietoista ajattelua ja tarkkuutta. Virheellisten tai
+      keskenään ristiriitaisten määritysten selvittäminen voi olla hyvinkin
+      työlästä.
+    </p>
+
+    <p>
+      Jokaisen määrityksen toimivuus kannattaa testata selaimessa heti sen
+      kirjoittamisen jälkeen. Seuraava määritys kirjoitetaan vasta kun edellinen
+      on todettu toimivaksi. Ja tietysti, CSS-tiedosto on aina tarkistettava
+      CSS-validaattorilla. Nämä kaksi kysymystä kannattaa pitää koko ajan
+      mielessä:
+    </p>
+
+    <ol>
+      <li>
+        Onko olemassa jokin yksinkertaisempi tai taloudellisempi tapaa tehdä
+        tämä asia?
+      </li>
+      <li>
+        Vaikuttaako tekemäni määritys vain siihen mihin haluan vai myös johonkin
+        muuhun?
+      </li>
+    </ol>
+
+    <h2>CSS-säännön syntaksi</h2>
+
+    <p>Jokainen CSS-sääntö koostuu kolmesta osasta:</p>
+
+    <ul>
+      <li>
+        selektori määrittää mihin muotoilu kohdistuu (leipäteksti, otsikko,
+        jne.)
+      </li>
+      <li>
+        ominaisuus määrittää mitä ominaisuutta muutetaan (väri, koko, jne.)
+      </li>
+      <li>
+        arvo määrittää millaiseksi ominaisuus muutetaan (sininen, 15 pikseliä,
+        jne.)
+      </li>
+    </ul>
+
+    <p>
+      CSS syntaksi: <code>selektori { ominaisuus: arvo; }</code><br />
+      Esimerkki: <code>h1 { font-size: 120%; }</code>
+    </p>
+
+    <h3>Muistilista syntaksista</h3>
+
+    <ul>
+      <li>
+        ominaisuus-arvo parit, eli deklaraatiot, kirjoitetaan kaarisulkeiden
+        sisään
+      </li>
+      <li>
+        kaarisulkeiden pikanäppäimet: Win: <code>Ctrl + Alt + 7</code>, Mac:
+        <code>Alt + Shift + 8</code>
+      </li>
+      <li>ominaisuuden jälkeen tulee aina kaksoispiste</li>
+      <li>jokainen ominaisuus-arvo pari päätetään puolipisteeseen</li>
+      <li>
+        jos arvo koostuu useasta sanasta, kirjoitetaan arvo lainausmerkkien
+        sisään, esim: <code>"Times New Roman"</code>
+      </li>
+      <li>
+        jos arvolla on mittayksikkö (%, px, em, jne.), se kirjoitetaan kiinni
+        arvoon ilman välilyöntiä, esim: <code>margin: 0px;</code>
+      </li>
+      <li>
+        jos yksi sääntö halutaan kohdistaa useaan selektoriin, eri selektorit
+        erotetaan toisistaan pilkulla: <code>ul, ol { margin-top: 0px; }</code>
+      </li>
+      <li>
+        jos annetaan useita selektoreja, eikä eroteta niitä pilkulla, kohdistuu
+        määrittely jälkimmäisiin elementteihin, jotka ovat ensimmäisten
+        elementtien sisällä
+      </li>
+      <li>
+        esimerkiksi tämä sääntö muuttaa pelkästään numeroidun listan (ol) rivit
+        punaisiksi mutta ei muuta luetelmalistan (ul) rivien väriä: <code>ul ol {color: red;}</code>
+      </li>
+    </ul>
+
+    <h3>Vinkkejä</h3>
+
+    <ul>
+      <li>
+        yhdelle selektorille voidaan kirjoittaa useita ominaisuus-arvo -pareja
+        (deklaraatioita)
+      </li>
+      <li>
+        luettavuuden helpottamiseksi jokainen ominaisuus-arvo -pari
+        (deklaraatio) kannattaa kirjoittaa omalle rivilleen
+      </li>
+      <li>
+        CSS-editorien aputoiminnot helpottavat opiskelua ja nopeuttavat työtä
+      </li>
+      <li><code>/* Näin kirjoitan CSS-tiedostoon kommentin */</code></li>
+    </ul>
+
+    <h2>Mihin CSS:llä voi vaikuttaa?</h2>
+
+    <p>
+      CSS:stä on tällä hetkellä olemassa neljä eri versiota. CSS1, CSS2, CSS3 ja
+      CSS4. Versiot eroavat toisistaan ominaisuuksien määrän osalta. CSS1 on
+      vanhin suppein ja CSS4 uusin ja monipuolisin. Kaikki nykyselaimet tukevat
+      kattavasti CSS3 ominaisuuksia. Selainten CSS4 tuki ei sen sijaan vieläkään
+      ole täydellinen.
+    </p>
+
+    <p>Tässä muutamia yleisimpiä CSS2:een sisältyviä ominaisuuksia:</p>
+
+    <table>
+      <tr>
+        <td valign="top">
+          <p>Asettelu</p>
+          <ul>
+            <li>elementin leveys</li>
+            <li>elementin korkeus</li>
+            <li>elementin sijainti</li>
+            <li>marginaalit elementin ulkopuolella</li>
+            <li>täytteet elementin reunan ja sisällän välillä</li>
+            <li>elementin reunus (väri, paksuus, tyyli)</li>
+          </ul>
+        </td>
+        <td>
+          <p>Tekstin ominaisuudet</p>
+          <ul>
+            <li>fontti</li>
+            <li>fontin koko</li>
+            <li>
+              korostukset (kursivointi, lihavointi, alleviivaus, yliviivaus)
+            </li>
+            <li>tekstin riviväli</li>
+            <li>tekstin tasaus</li>
+            <li>kirjasinten väli</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <p>Värit</p>
+          <ul>
+            <li>elementin väri ja taustaväri</li>
+            <li>sivun taustaväri</li>
+            <li>reunusten väri</li>
+          </ul>
+        </td>
+        <td>
+          <p>Linkkien toiminta</p>
+          <ul>
+            <li>käymättömän linkin ulkoasu</li>
+            <li>käydyn linkin ulkoasu</li>
+            <li>aktiivisena olevan linkin ulkoasu (kursori linkin päällä)</li>
+            <li>linkin alleviivaus / alleviivauksen poisto (eri vaiheista)</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

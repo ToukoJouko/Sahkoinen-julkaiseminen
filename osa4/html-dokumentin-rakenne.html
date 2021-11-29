@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sähköinen julkaiseminen | HTML-dokumentin rakenne</title>
+  </head>
+  <body>
+    <h1>HTML5-dokumentin rakenne</h1>
+
+    <p>Tyhjän HTML5-dokumentin perusrakenne näyttää tältä:</p>
+
+    <p>
+      <code>
+        &lt;!DOCTYPE html&gt;<br />
+        &lt;html lang="en"&gt;<br />
+        &lt;head&gt;<br />
+        &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br />
+        &nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width,
+        initial-scale=1.0"&gt;<br />
+        &nbsp;&nbsp;&lt;title&gt;Document&lt;/title&gt;<br />
+        &lt;/head&gt;<br />
+        &lt;body&gt;<br />
+
+        &lt;/body&gt;<br />
+        &lt;/html&gt;
+      </code>
+    </p>
+
+    <h2>DOCTYPE – dokumenttityypin määritys</h2>
+
+    <p>
+      Jokaisen HTML-dokumentin ensimmäinen rivi ilmoittaa, mitä HTML-versiota
+      dokumentissa käytetään. Ilmoitus on tärkeä validaattoreille. Ne
+      tarkistavat koodin aina suhteessa ilmoitettuun dokumenttityyppiin.
+      Dokumenttityypin määritys on ainut html-tagiparin ulkopuolella sijaitseva
+      elementti.
+    </p>
+
+    <p>HTML5 version dokumenttityyppimäärittely on hyvin yksinkertainen:</p>
+
+    <p><code>&lt;!DOCTYPE html&gt;</code></p>
+
+    <h2>HTML-tagipari rajaa koko dokumentin</h2>
+
+    <p>
+      Verkkosivu alkaa ja päättyy html-tagiin. Dokumenttityypin määritystä
+      lukuun ottamatta kaikki muu sisältö kirjoitetaan html-tagiparin sisään.
+    </p>
+
+    <p>
+      Aloittavassa html-tagissa ilmoitetaan sivun sisällön kieli. Kieli
+      ilmoitetaan lang-attribuutilla. Attribuutin arvoksi tulee käytetyn kielen
+      lyhenne. Englanninkielisen sisällön lyhenne on en ja suomenkielisen
+      sisällön lyhenne on fi.
+    </p>
+
+    <p>Suomenkielinen sisältö ilmoitetaan aloittavassa html-tagissa näin:</p>
+
+    <p><code>&lt;html lang="fi"&gt;</code></p>
+
+    <h2>HEAD – dokumentin otsikko-osio</h2>
+
+    <p>
+      Head-tagiparin sisään sijoitetaan dokumenttia kuvaavia, ja sen muotoilua
+      koskevia määrityksiä. Tärkeimmät head-osioon sijoitettavat asiat ovat
+      käytettävän merkistön määritys, dokumentin ulkoinen otsake, eli title, ja
+      linkki dokumentin ulkoasua määrittävään tyylitiedostoon. Head-osioon
+      sijoitettavat asiat eivät näy selainikkunassa.
+    </p>
+
+    <h2>Merkistön määritys</h2>
+
+    <p>
+      HTML-dokumentissa käytettävä merkistö pitää ilmoittaa selaimelle, jotta se
+      osaa näyttää kirjoitettavat merkit oikein.
+    </p>
+
+    <p>
+      HTML5-dokumenttityypissä käytetään UTF-8 merkistöä (Unicode). UTF-8
+      ratkaisee skandien, symbolien ja erikoismerkkien esittämisen ongelman
+      verkkosivuilla. UTF-8 merkistöä käytettäessä skandit, symbolit ja
+      erikoismerkit voidaan kirjoittaa normaalisti näppäimistöllä. Niitä ei enää
+      tarvitse kirjoittaa hankalilla korvausmerkeillä.
+    </p>
+
+    <p>
+      Käytettävä merkistö ilmoitetaan dokumentin otsikko-osioon (head)
+      sijoitettavalla meta-tagilla näin:
+    </p>
+
+    <p><code>&lt;meta charset="UTF-8"&gt;</code></p>
+
+    <h2>BODY – selainikkunassa näkyvä sisältö</h2>
+
+    <p>
+      Kaikki selainikkunassa näkyvä sisältö sijoitetaan body-tagiparin sisään.
+    </p>
+  </body>
+</html>

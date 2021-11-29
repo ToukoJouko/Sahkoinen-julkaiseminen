@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sähköinen julkaiseminen | Linkkien muotoilu</title>
+    <link rel="stylesheet" href="/harjoitustyyli.css" />
+  </head>
+  <body>
+    <h1>CSS ja linkkien muotoilu</h1>
+
+    <p>
+      <a href="#pseudoluokat">Linkin pseudoluokat</a><br />
+      <a href="#suosituksia">Suosituksia linkkien muotoiluun</a><br />
+      <a href="#esimerkkeja">Esimerkkejä linkkien muotoilusta</a>
+    </p>
+
+    <h2 id="pseudoluokat">Linkin pseudoluokat</h2>
+
+    <p>
+      Linkillä on todellisuudessa neljä eri toimintavaihetta tai tilaa. CSS:llä
+      linkin jokaisen vaiheen ulkoasu voidaan määrittää halutun kaltaiseksi.
+      Tästä johtuen linkkien toimintaa ei voida määrittää pelkkää a-selektoria
+      käyttämällä.
+    </p>
+
+    <p>
+      Linkkien ulkoasu määritellään kirjoittamalla CSS-tiedostoon jokaiselle
+      vaiheelle omat määritykset. Eri vaiheiden erottaminen tapahtuu niin
+      sanotuilla pseudoluokilla. Selektori ja siihen liitetty pseudoluokka
+      kertovat, mitä vaihetta sääntö kuvaa. Selektori ja pseudoluokka erotetaan
+      toisistaan kaksoispisteellä.
+    </p>
+
+    <p>A-tagin neljä pseudoluokkaa ovat:</p>
+
+    <p>
+      <code>
+        a:link - käymätön linkki<br />
+        a:visited - käyty linkki<br />
+        a:hover - kursori linkin päällä<br />
+        a:active - aktivoitu linkki (hiiren nappi pohjassa)
+      </code>
+    </p>
+
+    <p>
+      Linkkien pseudoluokat pitää kirjoittaa CSS-tiedostoon aina yllä olevassa
+      järjestyksessä. Muuten määritykset eivät toimi oikein. Eri selaimet
+      reagoivat väärään järjestykseen eri tavoin. Vaikka haluaisit tehdä
+      muutoksia vain yhteen vaiheeseen, tulee toimivuuden varmistamiseksi
+      ehdottomasti määritellä aina kaikki linkin vaiheet.
+    </p>
+
+    <p>
+      Linkkien muotoilusta löytyy harjoituksia w3schools-sivuston
+      <a href="http://www.w3schools.com/css/css_link.asp">CSS Links -sivuilta</a
+      >.
+    </p>
+
+    <h2 id="suosituksia">Suosituksia linkkien muotoiluun</h2>
+
+    <p>
+      Oletusmuodossaan käymättömät linkit ovat sinisiä ja alleviivattuja. Käydyt
+      linkit taas ovat sinipunaisia ja alleviivattuja.
+    </p>
+
+    <p>
+      Tekstin seassa olevat linkit voi aivan hyvin antaa olla oletusmuodossaan.
+      Jos muutat tekstin seassa olevien linkkien ulkoasua, määritä värit niin,
+      että linkit varmasti erottuvat riittävän selvästi leipätekstistä ja
+      taustasta. Eli reilu kontrasti linkin ja taustan välillä ja selvä väriero
+      leipätekstin ja linkin välillä.
+    </p>
+
+    <p>
+      Navigointilinkeissä alleviivauksen poisto on yleinen käytäntö, ja se
+      parantaa navigointijärjestelmän selkeyttä. Lisäksi navigointilinkeissä
+      käydyn ja käymättömän linkin ulkoasu määritetään useimmiten samanlaisiksi,
+      jotta navigointijärjestelmän ulkoasu pysyy yhtenäisenä sivustoa
+      käytettäessä.
+    </p>
+
+    <h2 id="esimerkkeja">Esimerkkejä linkkien muotoilusta</h2>
+
+    <p>
+      Alla on kuvattu kaksi tyypillistä tapaa muotoilla leipätekstin seassa
+      olevia linkkejä.
+    </p>
+
+    <h3>Esimerkki 1 - alleviivauksen poisto</h3>
+
+    <p>
+      Alleviivauksen poisto on yleinen keino parantaa linkkitekstien
+      luettavuutta. Tässä esimerkissä alleviivauksen poisto tehdään
+      <code>link</code> ja <code>visited</code> vaiheisiin.
+      <code>Hover</code> ja <code>active</code> vaiheissa linkit näytetään
+      alleviivattuina.
+    </p>
+
+    <p>
+      <code>
+        a:link {<br />
+        text-decoration: none;}<br />
+        a:visited {<br />
+        text-decoration: none;}<br />
+        a:hover {<br />
+        text-decoration: underline;}<br />
+        a:active {<br />
+        text-decoration: underline;}
+      </code>
+    </p>
+
+    <h3>Esimerkki 2 - värin vaihto ja alleviivauksen poisto</h3>
+
+    <p>
+      Tässä esimerkissä käymättömien ja käytyjen linkkien väri on muutettu
+      oletusväriä vaaleamman siniseksi. <code>Hover</code>- ja
+      <code>active</code>-vaiheissa linkin väri muuttuu tummansiniseksi ja
+      linkki muuttuu alleviivatuksi. Taustaväri on määritetty kaikissa vaiheissa
+      läpinäkyväksi.
+    </p>
+
+    <p>
+      <code>
+        a:link {<br />
+        text-decoration: underline;<br />
+        color: blue; }<br />
+
+        a:visited {<br />
+        text-decoration: underline;<br />
+        color: blue; }<br />
+
+        a:hover {<br />
+        text-decoration: none;<br />
+        color: rgb(0, 132, 255); }<br />
+
+        a:active {<br />
+        text-decoration: none;<br />
+        color: rgb(0, 132, 255); }<br />
+      </code>
+    </p>
+  </body>
+</html>

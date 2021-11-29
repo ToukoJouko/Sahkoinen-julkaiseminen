@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sähköinen julkaiseminen | CSS-suorakaidemalli</title>
+    <link rel="stylesheet" href="/harjoitustyyli.css"></link>
+  </head>
+  <body>
+    <h1>CSS - suorakaidemalli</h1>
+
+    <p>
+      CSS-asettelu ja asioiden esitystapa perustuu suorakaiteen muotoisiin
+      lohkoihin. Suorakaidemalli muistuttaa pitkälti HTML:stä tuttuja
+      lohkoelementtejä. HTML-lohkoelementtejä ovat mm. taulukot,
+      tekstikappaleet, otsikot, listat ja div-elementit.
+    </p>
+
+    <h2>Width</h2>
+
+    <p>
+      Width-ominaisuus ilmoittaa elementin leveyden. Arvoina on helpointa
+      käyttää pikseleitä tai prosentteja. Annettaessa arvo prosentteina,
+      määrittyy elementin koko suhteessa sitä ympäröivään elementtiin.
+    </p>
+
+    <ul>
+      <li>leveys annetaan aina lukuarvona</li>
+      <li>
+        arvo määrittää ainoastaan elementin sisällön leveyden - täytteet ja
+        marginaalit lisätään leveyteen
+      </li>
+      <li>max-width-ominaisuudella voidaan määrittää enimmäisleveys</li>
+      <li>
+        max-width on kätevä esim. tekstikappaleiden, koko sivun tai joustavan
+        sisältöosan leveyden rajoittamiseen
+      </li>
+      <li>
+        min-width-ominaisuudella voidaan määrittää minimileveys, tarvitaan
+        harvoin
+      </li>
+    </ul>
+
+    <h2>Height</h2>
+
+    <p>
+      Height-ominaisuus ilmoittaa elementin korkeuden. Arvoina on helpointa
+      käyttää pikseleitä tai prosentteja. Annettaessa arvo prosentteina,
+      määrittyy elementin koko suhteessa sitä ympäröivään elementtiin.
+      Useimmissa tapauksissa elementin korkeus on fiksua jättää määrittelemättä
+      ja antaa elementin joustaa sisällön vaatiman tilan mukaan.
+    </p>
+
+    <ul>
+      <li>
+        arvo määrittää ainoastaan elementin sisällön korkeuden - täytteet ja
+        marginaalit lisätään korkeuteen
+      </li>
+      <li>
+        min-height-ominaisuudella voidaan määrittää elementin minimikorkeus
+      </li>
+      <li>
+        min-height voi olla hyödyllinen esimerkiksi sivun jonkin osion
+        vähimmäiskorkeuden määrittämisessä
+      </li>
+    </ul>
+
+    <h2>Margin</h2>
+
+    <p>
+      Kaikkien HTML-lohkoelementtien (tekstikappale, otsikkotaso, kuva, lista,
+      taulukon solu jne.) ympärille (elementin ulkopuolelle) voidaan määritellä
+      marginaali eli tyhjä tila. Marginaalit ovat aina läpinäkyviä.
+      Marginaaleille voidaan antaa arvo pituusyksikköinä (esim. px) tai
+      prosentteina. Jos yksikkönä käytetään prosentteja, lasketaan marginaalin
+      koko suhteessa elementtiä ympäröivään tilaan (esim. selainikkunaan).
+      Marginaalien arvojen antojärjestys on ylhäältä alkaen myötäpäivään, eli:
+    </p>
+
+    <ul>
+      <li>ylämarginaalin arvo</li>
+      <li>oikean marginaalin arvo</li>
+      <li>alamarginaalin arvo</li>
+      <li>vasemman marginaalin arvo</li>
+    </ul>
+
+    <p>
+      Jos kaikki marginaalit (ylä, oikea, ala, vasen) halutaan määrittää saman
+      suuruisiksi, riittää että annetaan vain yksi arvo. Seuraava esimerkki
+      määrittää kaikki tekstikappaleiden (p) marginaalit yhdellä kertaa 15
+      pikselin suuruisiksi.
+    </p>
+
+    <p><code>p { margin: 15px; }</code></p>
+
+    <p>
+      Seuraava esimerkki poistaa sivulta ylä- ja alamarginaalit mutta tekee
+      sivun oikealle ja vasemmalle reunalle 8% levyiset marginaalit.
+      Prosentteina annettavat marginaalit ovat suhteellisia, eli selainikkunan
+      koon mukaan määrittyvinä.
+    </p>
+
+    <p><code>body { margin: 0% 8% 0% 8%; }</code></p>
+
+    <p>
+      Edellä kuvattua järjestystä (myötäpäivään ylhäältä alkaen) kannattaa
+      selkeyden vuoksi noudattaa myös silloin kun jokainen marginaali
+      määritellään erillisillä ominaisuus-arvo -pareilla. Seuraava esimerkki
+      toteuttaa täsmälleen saman asian kuin edellinen, ainoastaan eri tavalla
+      kirjoitettuna:
+    </p>
+
+    <p>
+      <code
+        >body {<br />
+        &nbsp;&nbsp;margin-top: 0%;<br />
+        &nbsp;&nbsp;margin-right: 8%;<br />
+        &nbsp;&nbsp;margin-bottom: 0%;<br />
+        &nbsp;&nbsp;margin-left: 8%;<br />
+        }</code
+      >
+    </p>
+
+    <h2>Padding</h2>
+
+    <p>
+      Suorakaidemallissa kaikille lohkoelementeille voidaan määritellä täyte
+      (padding). Täyte tarkoittaa elementin reunan ja sen sisällön väliin jäävää
+      tyhjää tilaa, vaikkapa taulukkoon sijoitetun tekstin ja taulukon solun
+      reunan välistä tyhjää tilaa. Jos padding ominaisuudelle annetaan vain yksi
+      arvo, se määrittää täytteen leveyden elementin jokaiselle sivulle samaksi.
+      Jos elementin eri sivuille halutaan antaa eri suuruiset täytteet, tulee
+      jokaisen sivun täyte määritellä erikseen. Aivan kuten marginaaleja
+      asetettaessa. Seuraava esimerkki määrittää taulukon solun (td) sisällän ja
+      solun reunan väliin on 10 pikselin suuruisen täytteen:
+    </p>
+
+    <p><code>td { padding: 10px; }</code></p>
+
+    <p>
+      Seuraava esimerkki määrittelee taulukon solun täytteiksi 5 pikseliä ylös
+      ja alas, ja 10 pikseliä oikealle ja vasemmalle:
+    </p>
+
+    <p><code>td { padding: 5px 10px 5px 10px; }</code></p>
+
+    <h2>Border</h2>
+
+    <p>
+      Suorakaidemallissa kaikki lohkoelementit varaavat itselleen suorakaiteen
+      muotoisen tilan. Tilan rajoja kutsutaan reunuksiksi. Oletuksena
+      elementtien reunukset ovat näkymättämiä mutta ne saadaan näkyviksi
+      määrittämällä reunukselle väri, tyyppi ja paksuus.
+    </p>
+
+    <ul>
+      <li>border-width = reunaviivan leveys</li>
+      <li>border-color = reunaviivan väri</li>
+      <li>border-style = reunaviivan tyyppi</li>
+    </ul>
+
+    <p>Millaiset reunukset seuraava esimerkki tekee ja mille?</p>
+
+    <p>
+      <code
+        >table {<br />
+        &nbsp;&nbsp;border-width: 0px 1px 0px 1px;<br />
+        &nbsp;&nbsp;border-style: solid;<br />
+        &nbsp;&nbsp;border-color: red;<br />
+        }</code
+      >
+    </p>
+  </body>
+</html>

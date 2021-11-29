@@ -1,0 +1,63 @@
+html {
+  margin-bottom: 40px;
+}
+
+body {
+  max-width: 1000px;
+  min-width: 400px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  border-width: 5px;
+  border-style: solid;
+  border-color: blue;
+  padding: 10px 0 10px 10px;
+}
+
+p,
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 0 10px 0;
+}
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 0 10px 0;
+}
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 0 10px 0;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* PERUSLINKKIEN TOIMINTA */
+
+a:link {
+  text-decoration: underline;
+  color: blue;
+}
+
+a:visited {
+  text-decoration: underline;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(0, 132, 255);
+}
+
+a:active {
+  text-decoration: none;
+  color: rgb(0, 132, 255);
+}

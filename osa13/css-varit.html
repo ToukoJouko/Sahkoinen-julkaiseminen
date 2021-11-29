@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sähköinen julkaiseminen | CSS-värit</title>
+    <link rel="stylesheet" href="/harjoitustyyli.css"></link>
+  </head>
+  <body>
+    <h1>CSS - värit ja taustavärit</h1>
+
+    <p>
+      Sivuston värejä määritettäessä kannattaa ehdottomasti käyttää kunnollista
+      värihallintatyökalua. Kunnolliset CSS-editorit sisältävät värien valintaan
+      tarkoitetun työkalun mutta verkosta löytyy myös erillisiä
+      värinhallintatyökaluja. Eräs hyvä ja monipuolinen vaihtoehto on
+      <a href="http://paletton.com">http://paletton.com</a>. Esteettisten
+      asioiden lisäksi värien määrittelyssä on syytä muistaa muutamia teknisiä
+      seikkoja:
+    </p>
+
+    <ul>
+      <li>
+        kun määrität elementin piirtovärin, määritä aina myös taustaväri (esim.
+        tekstin värin + taustaväri)
+      </li>
+      <li>
+        jos määrität sivuillesi oletuksesta poikkeavan taustavärin, muista aina
+        määrittää myös piirtoväri
+      </li>
+      <li>
+        älä käytä tekstin alla taustakuvia, ne heikentävät tekstin luettavuutta
+      </li>
+      <li>
+        jos muutat linkkien värejä, määritä aina myös linkkien taustavärit
+      </li>
+    </ul>
+
+    <h2>Color</h2>
+
+    <p>
+      Color-ominaisuus asettaa elementin piirtovärin. Väri on
+      color-ominaisuudessa mahdollista määrittää hyvin monilla eri arvoilla
+      (teksti, heksadesimaali, kymmenjärjestelmä, prosentti). Värien määritys
+      tapahtuu todellisuudessa kuitenkin aina RGB-järjestelmän mukaan
+      heksadesimaaleina. Tämä johtuu siitä, että tietokoneet käsittelevät värejä
+      aina RGB-järjestelmän mukaisesti. Tekstimääritystä, kymmenjärjestelmää ja
+      prosenttimerkintää voidaankin ajatella vaihtoehtoisina esitystapoina
+      heksadesimaaleille.
+    </p>
+
+    <ul>
+      <li>teksti: <code>color: lime;</code></li>
+      <li>prosentti: <code>color: rgb(0%,100%,0%);</code></li>
+      <li>kymmenjärjestelmä: <code>color: rgb(0,255,0);</code></li>
+      <li>heksadesimaali: <code>color: #00FF00;</code></li>
+    </ul>
+
+    <p>
+      RGB-värijärjestelmässä jokainen väri muodostetaan punaisen (R), vihreän
+      (G) ja sinisen (B) sekoituksena. Kunkin värin osuus ilmoitetaan kahdella
+      numerolla tai kirjaimella. RGB-heksadesimaali on siis aina kuuden luvun
+      tai kirjaimen pituinen. Kuusinumeroinen heksadesimaali voidaan joissain
+      tapauksissa lyhentää kolminumeroiseksi. Lyhentäminen on mahdollista, jos
+      yksittäisen värin molemmat arvot ovat samat. Esimerkiksi
+      <code>#f0f</code> tarkoittaa samaa kuin <code>#ff00ff</code>.
+    </p>
+
+    <p>
+      Suosittelen alusta asti totuttelemaan heksadesimaalien käyttöön.
+      Heksadesimaaleja käytettäessä väriarvojen kopiointi esimerkiksi
+      kuvankäsittelyohjelmasta helpottuu ja totut värihallintaohjelmien ja
+      kuvankäsittelyohjelmien tapaan merkitä värejä.
+    </p>
+
+    <ul>
+      <li>heksadesimaaliarvo alkaa CSS-tiedostossa aina risuaitamerkillä: #</li>
+      <li>
+        heksadesimaali koostuu kuudesta peräkkäisestä numero ja/tai
+        kirjainparista (Red, Green, Blue)
+      </li>
+      <li>kaksi ensimmäistä lukua/kirjainta ilmoittaa punaisen määrän</li>
+      <li>kaksi keskimmäistä lukua/kirjainta ilmoittavat vihreän määrän</li>
+      <li>kaksi viimeistä lukua/kirjainta ilmoittavat sinisen määrän</li>
+      <li>
+        jos värin molemmat luvut/kirjaimet ovat samat, se voidaan lyhentää
+        yhdellä luvulla/kirjaimella esitettäväksi
+      </li>
+    </ul>
+
+    <p>
+      Seuraava esimerkki määrittää tekstikappaleen piirtovärin. Punaisen,
+      vihreän ja sinisen arvo on 00. Tuloksena on musta.
+    </p>
+
+    <p><code>p { color: #000000; }</code></p>
+
+    <p>
+      Seuraava esimerkki määrittää taulukon soluun sijoitetun tekstikappaleen
+      piirtovärin. Punaisen, vihreän ja sinisen arvo on 66. Tuloksena on harmaa.
+    </p>
+
+    <p><code>td p { color: #666666; }</code></p>
+
+    <h2>Background-color</h2>
+
+    <p>
+      Background-color-ominaisuus määrittää elementin taustavärin. Mille tahansa
+      elementille voidaan määrittää taustaväri. Seuraava esimerkki asettaa koko
+      dokumentin taustaväriksi hopeanharmaan.
+    </p>
+
+    <p><code>body { background-color: #F3F3F3; }</code></p>
+
+    <p>
+      Tekstikappaleen piirtoväriksi esitetään tummanharmaata ja taustaksi
+      valkoista seuraavasti.
+    </p>
+
+    <p>
+      <code
+        >p {<br />
+        &nbsp;&nbsp;color: #474747;<br />
+        &nbsp;&nbsp;background-color: #FFFFFF;<br />
+        }</code
+      >
+    </p>
+
+    <p>
+      Monissa tapauksissa on kätevää määrittää elementtien taustaväri
+      läpinäkyväksi. Tällöin elementin taustalla olevia värejä voidaan muuttaa
+      ilman että päällä olevan elementin taustaväriä tarvitsee määrittää
+      uudestaan. Läpinäkyvä taustaväri saadaan antamalla arvoksi transparent.
+    </p>
+
+    <p>
+      <code
+        >h1 {<br />
+        &nbsp;&nbsp;color: #474747;<br />
+        &nbsp;&nbsp;background-color: transparent;<br />
+        }</code
+      >
+    </p>
+  </body>
+</html>

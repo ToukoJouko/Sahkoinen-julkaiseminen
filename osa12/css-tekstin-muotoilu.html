@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sähköinen julkaiseminen | Tekstin muotoilu</title>
+
+<link rel="stylesheet" href="harjoitustyyli.css"></link>
+</head>
+<body>
+    <h1>Tekstin muotoilu tyylisäännöstöllä</h1>
+
+    <p>
+    <a href="#fontin_valinta">Fontin valinta - font-family</a><br>
+    <a href="#tekstin_tyyli">Tekstin tyyli - font-style</a><br>
+    <a href="#fontin_koko">Fontin koko - font-size</a><br>
+    <a href="#rivin_korkeus">Rivin korkeus - line-height</a><br>
+    <a href="#fontin_paksuus">Fontin paksuus - font-weight</a><br>
+    <a href="#tekstin_tasaus">Tekstin tasaus - text-align</a><br>
+    <a href="#kapiteelit">Kapiteelit - text-transform</a>
+    </p>
+    
+    
+    
+    <h2 id="fontin_valinta">Fontin valinta - font-family</h2>
+    
+    <p>Font-family-ominaisuus määrittää kirjasintyypin (fontin) jolla teksti näytetään. Yhdessä säännössä voidaan antaa useampia fontteja erottamalla ne toisistaan pilkulla. Selain näyttää tekstin aina ensimmäisen fontin mukaan, jonka se tunnistaa annetusta listasta. Jos selain ei tunnista yhtään annetuista fonteista, se käyttää jotakin muuta koneelta löytyvää annetun fonttiperheen jäsentä.</p>
+    
+    <p>Fontti on syytä määritellä aina sekä halutuilla fonteilla sekä fonttiperheellä. Seuraava esimerkki on hyvin tyypillinen. Se määrittää kaiken p-elementtien sisään sijoitetun tekstin esitettäväksi ensisijaisesti Arial fontilla, toissijaisesti Helveticalla ja ellei näitä koneelta löydy, niin jollain muulla päätteettömällä eli sans-serif-fontilla.</p>
+    
+    <p><code>p { font-family: Arial, Helvetica, sans-serif; }</code></p>
+    
+    <p>Jos fontin nimessä on välilyönti, on fontin nimi kirjoitettava lainausmerkkien sisään:</p>
+    
+    <p><code>p { font-family: "Times New Roman", Times, serif; }</code></p>
+    
+    
+    
+    <h2 id="tekstin_tyyli">Tekstin tyyli - font-style</h2>
+    
+    <p>Font-style-ominaisuus voi saada arvon normal, italic ja oblique. Normal näyttää tekstin ilman korostuksia. Italic näyttää tekstin kursivoituna. Myös oblique näyttää tekstin kursivoituna. Seuraava esimerkki kursivoi kaikki h2 tason otsikot:</p>  
+    
+    <p><code>h2 { font-style: italic; }</code></p> 
+    
+    
+    
+    <h2 id="fontin_koko">Fontin koko - font-size</h2>
+    
+    <p>Kirjasinkoko määritetään font-size-ominaisuuden avulla. Kirjasinkokoa voidaan määrittää usealla tavalla. Ylin esimerkki määrittää leipätekstin 16 pikselin korkuiseksi (yksikkönä px). Keskimmäinen esimerkki määrittää leipätekstin 1.1 kertaiseksi oletuskoosta (yksikkönä em). Alin esimerkki määrittää leipätekstin 90% kokoiseksi fontin oletuskoosta (yksikkönä prosentti).</p>
+    
+    <p><code>p { font-size: 16px; } <br>
+    p { font-size: 1.1em;} <br>
+    p { font-size: 90%; }</code></p>
+    
+    
+    
+    <h3>Muistettavaa fonttien koosta ja luettavuudesta</h3>
+    
+    <p>Fonttityypit poikkeavat luettavuudeltaan toisistaan. Ruudulta luettaessa päätteettömät, eli sans-serif-fontit (esimerkiksi Verdana, Arial, Trebuchet MS), ovat yleensä helpompia lukea kuin päätteelliset, eli sans-fontit (esimerkiksi Georgia, Times New Roman).</p>
+    
+    <p>Jos määrittelet fontin koon suhteellisesti (% tai em), muista huomioida määritysten yhteisvaikutus. Mitä esimerkiksi seuraava sääntö tekee jos käytät sivulla sisennettyjä listoja: <code>p, li: {font-size: 0.8em; }</code></p>
+    
+    <p>Fonttien oletuskoot poikkeavat toisistaan suuresti. Times New Roman on suhteellisen pientä. Arial on jonkin verran suurempaa kuin Times New Roman. Verdana taas on vielä Arialiakin suurempaa.</p>
+    
+    
+    
+    <h2 id="rivin_korkeus">Rivin korkeus - line-height</h2>
+    
+    <p>Tekstin luettavuuden parantamiseksi käytetään usein maltillista rivivälin kasvattamista. Sopiva arvo löytyy todennäköisesti 120 - 150% välimaastosta. Seuraava esimerkki suurentaa tekstikappaleiden rivivälin 140% suuruiseksi oletuskokoon nähden:</p>
+    
+    <p><code>p { line-height: 140%; }</code></p>
+    
+    
+    
+    <h2 id="fontin_paksuus">Fontin paksuus - font-weight</h2>
+    
+    <p>Font-weight ominaisuus määrittää fontin lihavuuden. HTML-korostustageilla (strong, em) teksti voidaan ainoastaan lihavoida tai kursivoida. Font-weight ominaisuudella fonttia voidaan sen sijaan sekä paksuntaa että ohentaa. Yleisin käyttökohde on HTML-otsikkotagien tekemän automaattisen lihavoinnin poisto. Automaattilihavointi saadaan poistettua arvoilla lighter tai 100.</p>
+    
+    <p>Fonteilla ei todellisuudessa ole yleensä kuin 2 tai korkeintaan 3 paksuutta. Sopiva paksuus löytyy vain kokeilemalla.</p>
+    
+    <ul>
+         <li>100-900</li>
+         <li>bold lihavoi (700)</li>
+         <li>normal esittää alkuperäisenä (400)</li>
+         <li>lighter ohentaa</li>
+    </ul>
+    
+    
+    
+    <h2 id="tekstin_tasaus">Tekstin tasaus - text-align</h2>
+    
+    <p>Text-align-ominaisuudella voidaan määrittää tekstikappaleen vaakasuuntainen tasaus. Oletuksena selaimet tasaavat tekstin vasemmalle. Jos tasausta ei haluta muuttaa, ei tasaustapaa tarvitse määrittää.</p>
+    
+    <ul>  
+         <li>left tasaa vasempaan reunaan (oletus)</li>
+         <li>right tasaa oikeaan reunaan</li>
+         <li>center tasaa keskelle</li>
+         <li>justify tasaa molempiin reunoihin</li>
+    </ul>
+    
+    <p>Leipätekstin tasausta molempiin reunoihin (justify) tulee välttää, vaikka se tekeekin sivusta näennäisesti huolitellun oloisen. Koska webissä tekstiä ei tavuteta juuri koskaan, tasaus tapahtuu pelkästään sanavälejä muuttamalla. Kun sanavälit vaihtelevat, tekstin luettavuus heikkenee selvästi. Myös oikeaan laitaan ja keskelle tasaamista tulee välttää lähes aina.</p>
+    
+    
+    
+    <h2 id="kapiteelit">Kapiteelit - text-transform</h2>
+    
+    <p>Text-transform -ominaisuudella voidaan muuttaa teksti näytettäväksi kapiteelikirjaimilla. Koska kapiteelit vaikeuttavat tekstin lukemista merkittävästi, ominaisuutta tarvitaan ja käytetään hyvin harvoin. Ominaisuudella on kolme mahdollista arvoa:</p>
+    
+    <ul>
+         <li>uppercase muuttaa kaiken tekstin kapiteeleiksi</li>
+         <li>lowercase muuttaa kaiken tekstin pieniksi kirjaimiksi</li>
+         <li>capitalize muuttaa sanojen alkukirjaimet kapiteeleiksi</li>
+    </ul>
+        
+</body>
+</html>

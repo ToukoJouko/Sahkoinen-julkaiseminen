@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sähköinen julkaiseminen | Mita HTML on?</title>
+  </head>
+  <body>
+    <h1>Mitä HTML on?</h1>
+    <a href="https://www.w3schools.com/">https://www.w3schools.com/</a><br>
+    <a href="https://www.w3.org/">https://www.w3.org/</a><br>
+    <a href="https://validator.w3.org/">https://validator.w3.org/</a>
+    <p>
+      HTML (HyperText Markup Language) on yksinkertainen merkitsemiskieli, jolla
+      tehdään selaimella katseltavia HTML-tiedostoja eli websivuja.
+    </p>
+    <p>
+      HTML-dokumentit ovat muotoilematonta tekstiä sisältäviä tiedostoja, jotka
+      on tallennettu .html muotoon. HTML-dokumentteja, eli verkkosivuja, voidaan
+      luoda millä tahansa tekstieditorilla (esim. Notepad) tai verkkosivujen
+      luontiin tarkoitetulla koodieditorilla (esim. Visual Studio Code).
+    </p>
+    <p>
+      HTML-dokumentissa ainoastaan pienet ja suuret kirjaimet, välimerkit ja
+      välilyönnit toistuvat sivulla sellaisena kuin ne kirjoitetaan. Kaikki muu
+      muotoilu tehdään HTML-komennoilla (tageilla) ja CSStiedostossa
+      määritellyillä tyylisäännöstöillä.
+    </p>
+    <h2>HTML kuvaa sivun rakennetta</h2>
+    <p>
+      HTML-dokumentti sisältää sivulla näkyvän tekstin lisäksi ainoastaan
+      HTML-elementtejä (ns. tageja), sekä joihinkin tageihin liitettäviä
+      lisämääreitä eli attribuutteja.
+    </p>
+    <p>
+      Tageilla ja attribuuteilla merkitään HTML-dokumentin rakennetta.
+      Esimerkiksi sivun pääotsikko rajataan h1-tagiparin (heading 1) sisään, ja
+      leipätekstikappaleet p-tagiparien (paragraph) sisään.
+    </p>
+    <p>
+      HTML ei ole ohjelmointikieli, jolla voidaan pakottaa sivun ulkoasu
+      tiettyyn ennalta määrättyyn muotoon, päinvastoin. HTML:n perusajatus on
+      tuottaa dokumentteja, jotka mukautuvat erilaisille katseluvälineille.
+      Mukautuvuus on HTML:n vahvuus, ei heikkous. Parhaimmillaan sama
+      HTMLdokumentti toimii hyvin eri laitteilla ja erikokoisilla näytöillä.
+    </p>
+    <h2>Elementit eli tagit</h2>
+    <p>
+      HTML-komentoja kutsutaan elementeiksi eli tageiksi. Suurin osa
+      HTML-elementeistä koostuu aloitus- ja lopetustagista. Näitä kutsutaan
+      tagipareiksi.
+    </p>
+    <p>
+      Tagien vaikutusalue rajataan aloitus- ja lopetustagilla. Aloitus- ja
+      lopetustagit ovat muuten samanlaisia mutta lopetustagiin kirjoitetaan
+      kauttaviiva ennen tagin nimeä.
+    </p>
+    <p>
+      Kaikki selainikkunassa näkyvä sisältö kirjoitetaan aina body-tagiparin
+      sisään.
+    </p>
+    <p>
+      On myös muutamia tageja, joilla ei ole lopetustagia. Yleisimpiä
+      päätteettömistä tageista ovat kuvan sivulle hakeva img-tagi ja pakotetun
+      rivinvaihdon tekevä br-tagi. Img-tagi ei rajaa sivulta mitään aluetta, se
+      ainoastaan hakee sivulle näytettävän kuvan. Myöskään br ei rajaa mitään
+      aluetta, se ilmoittaa yksinkertaisesti että tässä kohdassa on pakotettu
+      rivinvaihto.
+    </p>
+    <h2>Attribuutit</h2>
+    <p>
+      Useiden HTML-tagien yhteydessä voidaan käyttää lisämäärityksiä eli
+      attribuutteja, koska pelkkä HTML-tagi ei riitä kertomaan kaikkea
+      tarvittavaa tietoa tagin toiminnasta. Attribuutit sijoitetaan aina
+      aloitustagin sisään. Yhteen tagiin voidaan tarvittaessa lisätä useita
+      attribuutteja.
+    </p>
+    <p>
+      Attribuutti kertoo mitä asiaa määritetään. Attribuutit eivät toimi vielä
+      sellaisenaan, vaan niille tulee aina antaa jokin arvo. Arvo määrittää
+      attribuutin toimintaa, eli millaiseksi asia määritetään.
+    </p>
+    <p>
+      Lisättäessä tagille attribuutti, jätetään välilyönti aloitustagin nimen ja
+      attribuutin väliin. Attribuutin nimen jälkeen kirjoitetaan
+      yhtäsuuruusmerkki, jonka jälkeen kirjoitetaan attribuutille annettava arvo
+      lainausmerkkeihin kehystettynä. Kuulostaa monimutkaiselta mutta on itse
+      asiassa yksinkertaista.
+    </p>
+    <p>
+      Esimerkiksi jonkin elementin leveys määritetään width-attribuutilla ja
+      sille annettavalla arvolla. Jos arvo annetaan lukuna, se kuvaa leveyttä
+      näytön pikseleinä. Vaikkapa näin: width=”450”. Leveyttä määrittävä arvo
+      voidaan antaa myös prosentteina, jolloin luku kuvaa elementin kokoa
+      suhteessa sitä ympäröivään tilaan. Esimerkiksi width=”50%” määrittää
+      elementin kooksi puolet ympärillä olevasta tilasta.
+    </p>
+    <p>
+      Attribuuttien käyttäminen vaikuttaa ehkä hieman mutkikkaalta, mutta on
+      ensimmäisten käytännön kokeilujen jälkeen hyvin helppoa.
+    </p>
+    <p>
+      Kullakin tagilla on joukko mahdollisia attribuutteja, ja kullakin
+      attribuutilla on joukko mahdollisia arvoja.
+    </p>
+    <h2>Entä se ulkoasu?</h2>
+    <p>
+      Pelkillä HTML-tageilla, ja niihin liitetyillä attribuuteilla toteutetut
+      verkkosivut ovat ulkoasultaan väistämättä hyvin koruttomat ja ankeat. Tämä
+      johtuu siitä, että HTML-kieltä ei ole tarkoitettu tarkasti määritellyn
+      ulkoasun tekemiseen, vaan pelkästään dokumentin rakenteen merkitsemiseen.
+      Siksi ulkoasultaan näyttävien sivustojen tekeminen pelkän HTML:n avulla on
+      mahdotonta.
+    </p>
+    <p>
+      Sivuston ulkoasun muotoilu ja elävöittäminen tehdään erillisen
+      tyylitiedoston (CSS) ja kuvien avulla.
+    </p>
+  </body>
+</html>
