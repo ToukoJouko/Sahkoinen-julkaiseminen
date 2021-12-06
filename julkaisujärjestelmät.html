@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sähköinen julkaiseminen | Julkaisujärjestelmät</title>
+  </head>
+  <body>
+    <h1>Julkaisujärjestelmät</h1>
+
+    <p>
+      Perinteinen tapa tehdä sivustoja on kirjoittaa HTML- ja CSS-tiedostoja
+      käsin jollain koodieditorilla. Käsin tekeminen on edelleen hyvä
+      vaihtoehto, varsinkin pienempien sivustojen kohdalla. Kokeneelle tekijälle
+      pienehkö sivusto, jossa ei ole mutkikasta toiminnallisuutta, voi olla
+      kätevämpää toteuttaa käsin tekemällä kuin julkaisujärjestelmää käyttäen.
+    </p>
+
+    <p>
+      Käsin kirjoittamisen etuna on täydellinen vapaus ja kontrolli
+      lopputuloksen suhteen. Sivustosta voidaan tehdä kaikin puolin juuri
+      sellainen kuin halutaan. Monet koodieditorit ovat ilmaisia, joten
+      tekeminen on käytännössä ilmaista. Miksi nykyään sivustot kuitenkin
+      tehdään niin usein jollain julkaisujärjestelmällä? Syitä on useita, ja ne
+      koskevat niin laajoja kuin suppeitakin sivustoja
+    </p>
+
+    <h3>Helppous</h3>
+    <p>
+      Julkaisujärjestelmistä valtaosa on tehty niin helppokäyttöisiksi, että
+      lähes kuka tahansa pystyy luomaan niiden avulla kunnollisen sivuston.
+      Helpoimpien järjestelmien kohdalla tekijän ei välttämättä tarvitse osata
+      lainkaan HTML-merkkausta tai CSS-koodausta. Myös toimivan ulkoasun ja
+      asettelun toteuttaminen on parhaimmillaan hyvin helppoa. Järjestelmät
+      sisältävät valmiita ulkoasupohjia, joista valitaan omaan tarkoitukseen
+      sopivin. Minimissään käyttäjän tehtäväksi jää siis tarvittavien sivujen,
+      tekstien ja kuvien lisääminen.
+    </p>
+
+    <h3>Edullisuus</h3>
+    <p>
+      Pilvipalveluna toimivat järjestelmät ovat hyvin edullisia. Jo 10-20 euron
+      kuukausihinnalla saadaan pienelle organisaatiolle tai kevyeen
+      yrityskäyttöön soveltuvia ominaisuuksia, kuten mainosten poisto
+      sivustolta, yksilöllinen osoite, sivuston varmuuskopiointi,
+      sähköpostiosoitteita, chatominaisuus ja tuki videoille.
+    </p>
+
+    <h2>1. Julkaisujärjestelmien toimintaperiaate</h2>
+    <h3>Sivupohjat</h3>
+    <p>
+      Sivupohja tai ulkoasuteema on runko, joka määrittää millaisiin osiin sivu
+      on jaettu ja millainen asettelu sivulla on. Jokainen sivu sisältää useita
+      itsenäisiä lohkoja, joiden sisällä sitten esitetään jotain sisältöä.
+      Joissain järjestelmissä näitä sivun osia sanotaan lohkoiksi (WordPress
+      blocks), joissain taas portleteiksi (Liferay portlets).
+    </p>
+    <p>
+      Sivupohja ja sen lohkot määrittävät missä vaikkapa navigointijärjestelmä
+      sijaitsee ja mikä on sen koko, kuinka leveä sivusto on ja miten se reagoi
+      selainikkunan koon muutoksiin, mikä tila sivusta on varattu
+      sisältöosiolle, mikä alatunnisteelle, jne. Sivuille voidaan tarvittaessa
+      myös lisätä uusia lohkoja/portletteja sisällön esittämistä varten.
+    </p>
+    <p>
+      Kun julkaisujärjestelmällä tehdään tai ylläpidetään sivustoa, ei koskaan
+      muokata koko sivua, vaan jotain yksittäistä sivupohjan osaa eli lohkoa ja
+      siinä esitettävää sisältöä. Muokataan siis esimerkiksi
+      navigointijärjestelmän linkkejä, sivuston tunnuskuvaa, alatunnisteen
+      tekstejä, tietyn sivun sisältöosiota, tiettyä kuvaa, jne.
+    </p>
+
+    <h3>Graafinen käyttöliittymä</h3>
+    <p>
+      Kaikkia julkaisujärjestelmiä käytetään graafisen käyttöliittymän avulla.
+      Sivuja katsellaan järjestelmässä sellaisena kuin miltä ne käyttäjällekin
+      näyttävät. Kun jotain sivun kohtaa halutaan muokata, se klikataan
+      aktiiviseksi, jolloin järjestelmä näyttää muokkaukseen sopivat työkalut.
+      Tekstejä kirjoitetaan tekstinkäsittelyohjelmaa muistuttavalla editorilla,
+      kuvien tuomiseen ja muokkaukseen on omat graafiset työkalunsa, uusien
+      sivujen luomiseen omansa, jne. Normaalissa päivitys- ja ylläpitotyössä
+      käyttäjän ei tarvitse työstää HTML- ja CSS-koodia lainkaan.
+    </p>
+
+    <h3>Tietokantapohjaisuus</h3>
+    <p>
+      Kaikki julkaisujärjestelmät toimivat tietokannan avulla. Tämä tarkoittaa
+      sitä, että kaikki eri komponentit, kuten eri osioihin lisättävät tekstit,
+      kuvat ja ladattavat tiedostot, tallentuvat järjestelmän tietokantaan.
+      Tietokantaan ei siis tallenneta kokonaisia verkkosivuja vaan sivun eri
+      osia.
+    </p>
+    <p>
+      Vaikka kaikille sivustolle lisättäville tiedostoille annetaan
+      tallennettaessa tiedostonimi, on jokaisella sivuston elementillä
+      tietokannassa sen lisäksi oma yksilöivä tunnus eli ID.
+      Tietokantapohjaisuus mahdollistaa muun muassa sen, että kaikesta sivuston
+      sisällöstä voidaan pitää versiohistoriaa. Aina kun jotain sisältöä
+      muokataan, uusi versio tallentuu edellisten lisäksi. Tietokantaan
+      perustuva toiminta ei aiheuta opiskelun tarvetta – päinvastoin, se tekee
+      työskentelystä helpompaa ja joustavampaa.
+    </p>
+
+    <h2>2. Pilvipalveluna toimivat järjestelmät</h2>
+    <p>
+      Julkaisujärjestelmiä on paljon ja ne ovat ominaisuuksiltaan erilaisia.
+      Kaikkein helppokäyttöisimpiä ovat sellaiset järjestelmät, jotka toimivat
+      kokonaan pilvipalveluina. Ulkoasun muokkaus perustuu valmiisiin
+      sivupohjiin, joista valitaan sopivin ja mieluisin. Sen jälkeen lisätään
+      halutut sivut ja annetaan niille osoitteet sekä titlet, lisätään sivujen
+      sisällöt ja kuvat. Kaikki HTML-merkkaus ja CSSkoodi tulee järjestelmästä
+      automaattisesti.
+    </p>
+    <p>
+      Täytyy kuitenkin muistaa, että mitä helppokäyttöisemmäksi
+      julkaisujärjestelmä tehdään, sen enemmän sen käyttöön tulee erilaisia
+      rajoitteita. Pilvipalveluina toimiville järjestelmille on yleistä, että
+      aivan kaikkia asioita ei voida muokata rajattomasti. Lisäksi vaativampaa
+      toiminnallisuutta ei aina saada toteutettua. Itselle sopivan järjestelmän
+      valintaa helpottaa se, että miltei kaikkia pilvipalveluna toimivia
+      järjestelmiä voi kokeilla ja käyttää myös ilmaiseksi.
+    </p>
+    <p>Seuraavassa muutama suosittu pilvipohjainen julkaisujärjestelmä:</p>
+    <p>
+      Amerikkalainen
+      <strong
+        ><a href="https://wordpress.com/" target="_blank"
+          >WordPress.com</a
+        ></strong
+      >
+      julkaistiin vuonna 2005 ja se on yhä yleisin blogien ja pienten
+      verkkosivustojen toteutukseen käytettävä järjestelmä.
+    </p>
+    <p>
+      Myös Israelilainen
+      <strong><a href="https://www.wix.com/" target="_blank">Wix</a></strong> on
+      ollut markkinoilla jo pitkään. Yhtiö on perustettu 2006, ja sen itsensä
+      mukaan palvelulla on tällä hetkellä 180 miljoonaa käyttää ympäri maailman.
+      Wixissä ulkoasuteemat ovat tässä listatuista palveluista kaikkein
+      laajimmin ja tarkimmin muokattavissa.
+    </p>
+    <p>
+      Tsekkiläinen
+      <strong
+        ><a href="https://www.webnode.fi/" target="_blank">Webnode</a></strong
+      >
+      julkaistiin vuonna 2008 ja yhtiön itsensä mukaan sillä on noin 40
+      miljoonaa asiakasta. Järjestelmä on moderni ja helppokäyttöinen. Erityisen
+      mukava plussa on, että palvelu on lokalisoitu erittäin monelle eri
+      kielelle, myös suomeksi.
+    </p>
+
+    <h2>3. Asennettavat järjestelmät</h2>
+    <p>
+      Toisen ryhmän muodostavat on omalle verkkopalvelimelle tai webhotelliin
+      asennettavat järjestelmät. Suomessa suosituimpia tällaisista
+      järjestelmistä ovat WordPress.org, Liferay ja Drupal. Asennettavilla
+      järjestelmillä voidaan toki toteuttaa pieniäkin sivustoja mutta todellisia
+      hyötyjä niistä saadaan vasta vaativammissa toteutuksissa.
+    </p>
+    <p>
+      Asennettavat järjestelmät räätälöidään aina alusta asti kulloisenkin
+      sivuston tarpeisiin. Vähänkään suuremmat yritykset ja organisaatiot eivät
+      halua, että heidän sivustonsa näyttää valmiiseen sivupohjaan tehdyltä tai
+      että toimintojen suhteen on järjestelmästä johtuvia rajoituksia.
+      Tällaisissa projekteissa ulkoasun ja toiminnallisuuden määrittely on
+      tarkkaa puuhaa ja edellyttää mahdollisimman suurta vapautta järjestelmän
+      osalta.
+    </p>
+    <p>
+      Suurien sivustojen suunnittelu- ja toteutustyö tehdään aina yhteistyössä
+      ammattimaisen yrityksen tai yritysten kanssa. Tällaisissa projekteissa on
+      yleensä mukana erilaisia ohjelmointiyrityksiä, suunnitteluyrityksiä,
+      viestintätoimistoja ja sisältötuotantoa tekeviä yrityksiä.
+    </p>
+
+    <h3>Asennettavien julkaisujärjestelmien edut</h3>
+    <p>
+      Asennettavat järjestelmät ovat hyvin vapaasti muokattavissa.
+      Monipuolisimmissa asennettavissa järjestelmissä käytännössä kaikki
+      ulkoasua ja toiminnallisuutta koskevat asiat ovat määriteltävissä juuri
+      niin kuin halutaan. Sivupohjat luodaan itse kulloisenkin projektin
+      tarpeiden mukaan, joten valmiista ulkoasupohjista johtuvia rajoituksia ei
+      ole.
+    </p>
+    <p>
+      Koko järjestelmä asennetaan omalle verkkopalvelimelle tai haluttuun
+      webhotelliin. Näin palvelinjärjestelmään liittyvät tekniset kysymykset,
+      kuten tallennustila, verkkokaista, analytiikka ja tarvittavat lisäosat,
+      ovat vapaasti itse päätettävissä.
+    </p>
+    <p>
+      Laajoilla sivustoilla päivittäjiä, ylläpitäjiä ja kehittäjiä on aina
+      paljon. Tällaisissa tilanteissa erilaisten käyttäjäroolien ja
+      käyttöoikeuksien hallinta on välttämätöntä, ja miltei kaikki asennettavat
+      järjestelmät mahdollistavatkin tarkan käyttöoikeuksien hallinnan.
+    </p>
+    <p>
+      Suuret sivustot ovat usein myös kansainvälisen viestinnän välineitä. Lähes
+      kaikissa asennettavissa järjestelmissä on työkalut ja tuki sisältöjen
+      kieliversiointiin.
+    </p>
+    <p>
+      Kaikki vaativampi toiminnallisuus, kuten oman alueen pankeille ja
+      maksuvälineille lokalisoitu verkkokauppa ja erilaiset kirjautumista
+      vaativat toiminnot, kuten interaktiiviset asiointipalvelut ja intranetit,
+      ovat joustavammin toteutettavissa asennettavissa järjestelmissä.
+    </p>
+    <p>
+      Yhteenvetona voi sanoa, että mitä monipuolisemmasta ja suuremmasta
+      sivustosta on kyse, sitä vähemmän työkalussa saa olla rajoitteita. Asiat
+      pitää pystyä toteuttamaan juuri niin kuin tilaaja ja tekijät haluavat.
+    </p>
+    <p>
+      Sivuston päivittäjien ja ylläpitäjien näkökulmasta asennettavat
+      järjestelmät ovat aivan yhtä helppoja kuin pilvipalveluna käytettävät
+      järjestelmät. Käyttöliittymät ja toiminnot ovat saman tyyppisiä kaikissa.
+    </p>
+    <p>
+      Suosittuja asennettavia julkaisujärjestelmiä ovet esimerkiksi
+      <strong
+        ><a href="https://wordpress.org/" target="_blank"
+          >WordPress.org</a
+        ></strong
+      >,
+      <strong
+        ><a href="https://www.liferay.com/" target="_blank">Liferay</a></strong
+      >
+      sekä
+      <strong
+        ><a href="https://www.drupal.org/" target="_blank">Drupal</a></strong
+      >
+      .
+    </p>
+  </body>
+</html>
